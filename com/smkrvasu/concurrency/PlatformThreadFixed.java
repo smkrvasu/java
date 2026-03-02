@@ -1,4 +1,4 @@
-package com.smkrvasu.thread;
+package com.smkrvasu.concurrency;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

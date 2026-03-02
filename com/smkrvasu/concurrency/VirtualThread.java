@@ -1,4 +1,4 @@
-package com.smkrvasu.thread;
+package com.smkrvasu.concurrency;
 
 public class VirtualThread {
 

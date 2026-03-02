@@ -1,8 +1,5 @@
 package com.smkrvasu.versions.version8.streams;
 
-import com.smkrvasu.Employee;
-import com.smkrvasu.EmployeeUtil;
-
 import java.util.List;
 
 public class MapDemo {

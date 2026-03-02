@@ -1,4 +1,4 @@
-package com.smkrvasu.thread;
+package com.smkrvasu.concurrency;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

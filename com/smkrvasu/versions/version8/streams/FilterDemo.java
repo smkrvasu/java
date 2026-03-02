@@ -1,7 +1,5 @@
 package com.smkrvasu.versions.version8.streams;
 
-import com.smkrvasu.EmployeePredicate;
-
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;

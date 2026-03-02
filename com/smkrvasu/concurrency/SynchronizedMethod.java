@@ -1,11 +1,10 @@
-package com.smkrvasu.thread.locks;
+package com.smkrvasu.concurrency;
 
 public class SynchronizedMethod {
     public static void main(String[] args) throws InterruptedException {
         Counter counter = new Counter();
 
-        // Each thread will increment the counter 5 times
-        Runnable incrementTask = () -> {
+        Thread worker1 = new Thread(() -> {
             for (int i = 0; i < 5; i++) {
                 try {
                     counter.increaseCount();
@@ -14,10 +13,18 @@ public class SynchronizedMethod {
                     Thread.currentThread().interrupt();
                 }
             }
-        };
+        }, "Worker-1");
 
-        Thread worker1 = new Thread(incrementTask, "Worker-1");
-        Thread worker2 = new Thread(incrementTask, "Worker-2");
+        Thread worker2 = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                try {
+                    counter.increaseCount();
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }, "Worker-2");
 
         worker1.start();
         worker2.start();

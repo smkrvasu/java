@@ -1,4 +1,4 @@
-package com.smkrvasu.thread.locks;
+package com.smkrvasu.concurrency;
 
 /**
  * Demonstrates using a synchronized BLOCK to protect a critical section

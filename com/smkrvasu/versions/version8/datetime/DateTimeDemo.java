@@ -20,7 +20,12 @@ public class DateTimeDemo {
         // Duration and Period
         Period period = Period.between(independenceDay, today);
         System.out.println("Years since Independence: " + period.getYears());
-        Duration duration = Duration.ofHours(5);
-        System.out.println("Duration: " + duration);
+
+        // Instant
+        Instant start = Instant.now();
+        Instant end = Instant.now();
+
+        Duration duration = Duration.between(start, end);
+        System.out.println("Duration: " + duration.toNanos());
     }
 }
